@@ -31,7 +31,7 @@ def process_form():
     sender = data.get("Email")
     msg = data.get("Message")
     body = f"{name} at {sender} has sent you a message:\n\n{msg}"
-    subject = f"{name.title()} has sent you a message."
+    subject = f"{name} has sent you a message."
     send_email(subject, body)
     return redirect("/confirmation")
 
